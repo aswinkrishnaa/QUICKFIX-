@@ -114,13 +114,13 @@ function sendOTPByEmailPHPMailer($otp, $complaintId, $userEmail) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'team.quickfix.com@gmail.com';
-        $mail->Password = 'dzul nirh birw tmax';
+        $mail->Username = 'emailidofthesender';
+        $mail->Password = 'passwordofthemail';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         // Set From and To addresses
-        $mail->setFrom('team.quickfix.com@gmail.com', 'QuickFix');
+        $mail->setFrom('sendermailid', 'name');
         $mail->addAddress($userEmail);
 
         $mail->isHTML(true);
